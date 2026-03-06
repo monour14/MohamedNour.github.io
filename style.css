@@ -1,0 +1,443 @@
+/* General Reset & Smooth Scrolling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0d1117; /* Dark background */
+    color: #c9d1d9;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+/* About Section Side-by-Side Layout */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Space between the image and the text */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Make sure the image and text take up equal space */
+.about-image, .about-text {
+    flex: 1; 
+}
+
+/* Styling the About Image from Page 2 */
+.about-img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #30363d;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Adds a cool shadow behind it */
+    object-fit: cover;
+}
+
+/* Aligning the text properly */
+.about-text {
+    text-align: left;
+}
+
+/* Mobile Responsiveness: Stack them on small screens */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .about-text {
+        text-align: center;
+    }
+}
+/* Navigation */
+header {
+    background-color: #161b22;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #30363d;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 20px;
+    gap: 30px;
+}
+
+nav a {
+    color: #c9d1d9;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #58a6ff;
+}
+
+/* Sections */
+section {
+    padding: 100px 20px;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 80vh;
+}
+
+/* Home Section */
+#home h1 {
+    font-size: 4rem;
+    color: #58a6ff;
+}
+
+#home h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 24px;
+    background-color: #238636;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #2ea043;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid #8b949e;
+    color: #c9d1d9;
+}
+
+.btn-outline:hover {
+    background-color: #30363d;
+}
+
+/* Flex Layout for Education and Experience Cards */
+.flex-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Images/Logos inside Education and Experience */
+.card-icon {
+    width: 120px;
+    height: 120px;
+    object-fit: contain; /* Keeps logos/certificates from cropping */
+    border-radius: 8px;
+    background-color: #0d1117;
+    padding: 5px;
+    border: 1px solid #30363d;
+}
+
+.card-text {
+    flex: 1; /* Makes the text take up the rest of the available space */
+}
+
+/* Mobile responsiveness for Flex Cards (stacks them on small screens) */
+@media (max-width: 768px) {
+    .flex-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Service Offerings Grid */
+.service-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.service-card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    width: 220px; /* Keeps them compact like the PDF */
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: #58a6ff;
+}
+
+.service-card img {
+    width: 100%;
+    height: 140px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+/* Projects Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #58a6ff;
+}
+
+/* Skills List */
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.skills-list li {
+    background-color: #1f6feb;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* Contact Links */
+#contact a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Profile Image Styling */
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Makes it a perfect circle */
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #58a6ff; /* A nice blue border */
+}
+
+/* Project Card Overhaul for Images */
+.project-card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    text-align: left;
+    transition: transform 0.3s;
+    overflow: hidden; /* Ensures the image doesn't spill over the rounded corners */
+    padding: 0; /* Removed padding so image touches the edges */
+}
+
+/* Updated Project Images */
+.project-img {
+    width: 100%;
+    height: 250px; /* Slightly taller to fit dashboards better */
+    object-fit: contain; /* THIS IS THE MAGIC WORD: It stops the image from cropping! */
+    background-color: #0d1117; /* Fills empty space with your dark theme color */
+    border-bottom: 1px solid #30363d;
+    padding: 10px; /* Gives the dashboards a little breathing room inside the card */
+}
+/* Project Text Content */
+.project-content {
+    padding: 20px; /* Adds the padding back just for the text */
+}
+
+
+
+/* --- Project Detail Page Styles --- */
+
+.project-detail-section {
+    padding-top: 120px; /* Pushes content below the fixed navbar */
+    min-height: 100vh;
+}
+
+.detail-container {
+    max-width: 800px; /* Keeps the reading width comfortable */
+    margin: 0 auto;
+    text-align: left; /* Aligns text to the left for easier reading */
+}
+
+.detail-title {
+    font-size: 3rem;
+    color: #58a6ff;
+    margin-bottom: 15px;
+}
+
+.detail-tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.tag {
+    background-color: #1f6feb;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.detail-main-img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #30363d;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.detail-description h2 {
+    color: #ffffff;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.detail-description p {
+    color: #c9d1d9;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.detail-links {
+    margin-top: 40px;
+    display: flex;
+    gap: 15px;
+}
+
+
+/* --- Contact Section --- */
+#contact {
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.contact-info {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-item {
+    margin-bottom: 25px;
+    background-color: #161b22;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+}
+
+.contact-item h3 {
+    color: #58a6ff;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.contact-item a {
+    color: #c9d1d9;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.contact-item a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+    background-color: #0d1117;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #58a6ff;
+}
+
+.contact-form button {
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+/* Mobile Responsiveness: Stacks the form under the info on phones */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    .contact-info, .contact-form {
+        width: 100%;
+    }
+}
