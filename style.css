@@ -431,7 +431,79 @@ section {
     cursor: pointer;
     font-size: 1.1rem;
 }
+/* --- Skills Section --- */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 900px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
 
+.skill-category {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 30px;
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.skill-category h3 {
+    color: #58a6ff;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #c9d1d9;
+    display: flex;
+    align-items: center;
+}
+
+.skills-list li i {
+    color: #238636; /* Gives the checkmark/icons a nice green color */
+    width: 30px;
+    font-size: 1.2rem;
+}
+
+/* --- Footer Section --- */
+footer {
+    background-color: #0d1117;
+    border-top: 1px solid #30363d;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-content p {
+    color: #8b949e;
+    margin-bottom: 15px;
+}
+
+.footer-socials a {
+    color: #8b949e;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+    color: #58a6ff;
+}
 /* Mobile Responsiveness: Stacks the form under the info on phones */
 @media (max-width: 768px) {
     .contact-container {
@@ -533,3 +605,4 @@ i {
     margin-right: 0; /* Resets the margin for these specific centered icons */
     display: block; /* Centers the icon above the text */
 }
+
