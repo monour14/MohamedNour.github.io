@@ -519,3 +519,17 @@ section {
         height: 150px;
     }
 }
+
+/* --- Font Awesome Icon Spacing --- */
+i {
+    margin-right: 8px; /* Adds space between the icon and the text */
+}
+
+/* Make the contact icons larger and centered */
+.contact-icon {
+    font-size: 2rem;
+    color: #58a6ff;
+    margin-bottom: 10px;
+    margin-right: 0; /* Resets the margin for these specific centered icons */
+    display: block; /* Centers the icon above the text */
+}
