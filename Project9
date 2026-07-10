@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Analysis | Mohamednour</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html#projects">← Back to Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="project-detail-section">
+        <div class="detail-container">
+            
+            <h1 class="detail-title">Survey Analysis</h1>
+            
+            <div class="detail-tags">
+                <span class="tag">Data Visualization</span>
+            
+            </div>
+
+            <img src="img/SharksAttacks.png" alt="Survey dashboard" class="detail-main-img">
+
+            <div class="detail-description">
+                <h2>Project Purpose</h2>
+                <p>The core objective of this project was to analysis the user requirements for my graduation project</p>
+                
+              
+            </div>
+
+            <div class="detail-links">
+                <a href="https://public.tableau.com/app/profile/mohamed.nour1760/viz/GraduationProjectSurveyAnalysis1/Dashboard1" class="btn">View Interactive Dashboard</a>
+                
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
